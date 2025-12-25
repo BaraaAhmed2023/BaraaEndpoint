@@ -1,0 +1,109 @@
+:root {
+  --bg: #0b0f19;
+  --card: #111827;
+  --border: #1f2933;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --accent: #38bdf8;
+
+  --stable-bg: #22c55e;
+  --stable-text: #052e16;
+
+  --beta-bg: #f59e0b;
+  --beta-text: #3a2500;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 48px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.header {
+  margin-bottom: 40px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 36px;
+}
+
+.header p {
+  margin-top: 6px;
+  color: var(--muted);
+}
+
+/* Grid layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* Card */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 24px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Card content */
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.desc {
+  margin: 14px 0 18px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* Path */
+.path {
+  display: inline-block;
+  font-size: 13px;
+  padding: 6px 10px;
+  border-radius: 10px;
+  background: #020617;
+  color: var(--accent);
+}
+
+/* Health badge */
+.health {
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.health.stable {
+  background: var(--stable-bg);
+  color: var(--stable-text);
+}
+
+.health.beta {
+  background: var(--beta-bg);
+  color: var(--beta-text);
+}
